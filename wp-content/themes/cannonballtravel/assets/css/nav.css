@@ -1,0 +1,115 @@
+ul#navi * {
+
+    list-style:none;
+    text-decoration:none;
+}
+
+
+ul#navi  {
+    float:left;
+    font-size: 20px;
+    font-family: Euphemia;
+    text-transform: uppercase;
+    margin:0;
+    padding:0;
+}
+
+ul#navi a {
+    display:block;
+    padding:3px;
+    color:rgb(102,148,189);
+    text-align:center;
+}
+
+
+ul#navi li  {
+    position:relative;
+    float:left;
+    margin-right:41px;
+}
+
+ul#navi li.active a{
+    color: #6694BD;
+}
+
+
+ul#navi li ul li.active a{
+    color:rgb(0,54,104);
+}
+
+/* Alle Ebenen ausblenden */
+
+ul#navi ul  ,
+ul#navi  li:hover ul   {
+    position:absolute;
+    left:-9999px;
+
+
+}
+
+ul#navi  li:hover ul {
+    background-image: url('../img/nav.png');
+    background-position: center;
+    width: 420px;
+    height: 249px;
+    background-repeat: no-repeat;
+    z-index: 9999;
+}
+
+
+
+ul#navi li ul {
+    top:auto;
+}
+
+ul#navi li ul li{
+    top:30px;
+    width: 400px;
+    z-index: 500;
+    /*font-size: 16px;    Hier bei weiteren Info Punkten, Kommentar enfernen und grÃ¶ÃŸe Anpassen*/
+}
+
+
+
+
+/* Einzelne Ebenen einblenden */
+ul#navi li:hover ul  {
+    left:0;
+}
+
+ul#navi li:hover ul li{
+    color:#6694BD;
+}
+
+ul#navi li:hover ul li a:first-child{
+
+}
+
+
+ul#navi li:hover ul li a{
+    text-align: left;
+
+}
+
+/* Neuer Deklarationsblock um die Unterpunkte prÃ¤zise zu positionieren */
+ul#navi ul  li:hover  ul ,
+ul#navi ul  ul li:hover  ul  {
+    position:absolute;
+    left:100%;
+
+}
+
+
+/* Hover Hinter- und Vordergrundfarbe fÃ¼r alle Ebenen */
+ul#navi li:hover > a {
+    color:rgb(0,54,104);
+}
+
+ul#navi  ul li:hover  > a, ul#navi ul  ul  li:hover  > a, ul#navi ul  ul ul  li:hover  > a {
+    color:rgb(0,54,104);
+}
+
+ul#navi a span {
+    float:right;
+    font-weight:normal;
+}
